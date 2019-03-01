@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="blog.anirbanm.vcerow.model.applicationModule.VCEDemoModule">
+    <AppModuleConfig name="VCEDemoModuleLocal" jbo.project="blog.anirbanm.vcerow.model.Model"
+                     ApplicationName="blog.anirbanm.vcerow.model.applicationModule.VCEDemoModule"
+                     DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="jdbc/HrDS"/>
+      <Security AppModuleJndiName="blog.anirbanm.vcerow.model.applicationModule.VCEDemoModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="VCEDemoModuleShared" jbo.project="blog.anirbanm.vcerow.model.Model"
+                     ApplicationName="blog.anirbanm.vcerow.model.applicationModule.VCEDemoModule"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="jdbc/HrDS"/>
+      <Security AppModuleJndiName="blog.anirbanm.vcerow.model.applicationModule.VCEDemoModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>
